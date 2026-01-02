@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Food</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; scroll-behavior: smooth; }
+    .topbar {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: rgba(255,255,255,0.9);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 30px; height: 70px; z-index: 1000;
+      border-bottom: 1px solid #ddd;
+    }
+    .logo { font-size: 20px; font-weight: bold; color: #e63946; }
+    .nav { display: flex; gap: 20px; }
+    .nav a {
+      text-decoration: none; color: #333; font-size: 16px;
+      padding: 8px 12px;
+    }
+    .nav a:hover { color: #e63946; font-weight: bold; }
+    .hero {
+      height: 100vh; display: flex; align-items: center;
+      padding-left: 40px;
+      background-size: cover; background-position: center;
+      background-repeat: no-repeat;
+      background-blend-mode: darken;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .hero h1 {
+      color: #fff; font-size: clamp(32px, 7vw, 80px);
+      font-weight: 900; line-height: 1.1; max-width: 700px;
+    }
+    .section {
+      padding: 60px 40px; text-align: center;
+    }
+    .section h2 {
+      font-size: 32px; color: #e63946; margin-bottom: 20px;
+    }
+    .section p { font-size: 18px; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+    .menu-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 20px; max-width: 1000px; margin: 40px auto;
+    }
+    .menu-item {
+      background: #fff; padding: 20px; border: 1px solid #ddd;
+      text-align: center; border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .menu-item:hover { transform: translateY(-5px); }
+    .menu-item img {
+      width: 100%; height: 180px; object-fit: cover;
+      border-radius: 8px; margin-bottom: 12px;
+    }
+    .menu-item h3 { margin-bottom: 8px; color: #e63946; }
+    footer {
+      background: #333; color: #fff; text-align: center;
+      padding: 20px; font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">🍲  Food</div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#why">Why Choose Us?</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section id="home" class="hero" style="background-image: url('https://images.pexels.com/photos/1600727/pexels-photo-1600727.jpeg');">
+    <h1>Every bite brings joy,<br>Every meal brings us closer.</h1>
+  </section>
+  <section id="why" class="section">
+    <h2>Why Choose Us?</h2>
+    <p>We serve fresh, healthy, and delicious meals with unmatched quality and offers.</p>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://static.vecteezy.com/system/resources/previews/020/611/676/original/single-continuous-line-drawing-of-stylized-man-chef-serving-food-for-restaurant-logo-label-food-cafe-mascot-concept-modern-one-line-draw-design-graphic-illustration-for-food-delivery-service-vector.jpg" alt="Quality Service">
+        <h3>Quality Service</h3>
+        <p>Enjoy top-notch customer service and a seamless dining experience, every time you order.</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://img.freepik.com/premium-vector/fresh-food-vector-design-logo_518759-168.jpg?w=2000" alt="Fresh Food">
+        <h3>Fresh Food</h3>
+        <p>Our ingredients are sourced fresh from trusted farms, cooked with care, and served with love.</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://img.freepik.com/premium-vector/best-offer-icon-white-background_349999-849.jpg" alt="Best Offers">
+        <h3>Best Offers</h3>
+        <p>Get exclusive deals, discounts, and offers that make every bite more satisfying.</p>
+      </div>
+      
+    </div>
+  </section>
+  <section id="menu" class="section">
+    <h2>Explore Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://curlytales.com/wp-content/uploads/2022/07/Untitled-design-2022-07-25T105549.084.jpg" alt="Chicken Biryani">
+        <h3>Chicken Biryani</h3>
+      </div>
+      <div class="menu-item">
+        <img src="https://freshprotino.com/wp-content/uploads/2021/03/maxresdefault-1.jpg" alt="Chicken Lollipop">
+        <h3>Chicken Lollipop</h3>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.licious.in/blog/wp-content/uploads/2020/12/Chicken-Barbeque-Kebab-600x600.jpg" alt="Chicken Tandoori">
+        <h3>Chicken Kebab</h3>
+      </div>
+      <div class="menu-item">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.6xVYFrI3n4mlqTIfzPrT4AHaFx?pid=Api&P=0&h=180" alt="Vegetable Rice">
+        <h3>Vegetable Rice</h3>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.kannammacooks.com/wp-content/uploads/masala-fish-fry-recipe-ayala-meen-Mackerel-fry-8.jpg" alt="Fish Fry">
+        <h3>Fish Fry</h3>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2019/11/Paneer-Butter-Masala-Recipe-1.jpg" alt="Fish Fry">
+        <h3>Paneer-Butter Masala</h3>
+      </div>
+      <div class="menu-item">
+        <img src="https://www.licious.in/blog/wp-content/uploads/2020/12/Grilled-Chicken-min-750x750.jpg" alt="Fish Curry">
+        <h3>Grilled-Chicken</h3>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="section">
+    <h2>Follow Us & Contact</h2>
+    <p>Email: <a href="mailto:order@foodlogo.com">order@foodlogo.com</a></p>
+    <p>contact: <a href="number:1234567890">1234567890</a></p>
+    <p>Address: CMR Center, Hyderabad, Telangana, India</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Mouni's Food. All Rights Reserved.
+  </footer>
+</body>
+</html>
